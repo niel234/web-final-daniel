@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    main {
+      flex: 1; /* Make main content take up remaining space */
+    }
+
+    footer {
+      background-color: #1f2937; /* Tailwind's gray-800 */
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
+    .list-decor {
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .list-decor::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #3b82f6; /* Tailwind's blue-500 */
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 shadow-lg">
+    <nav class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-wide">Daniel Sinaga</h1>
+      <ul class="flex space-x-6 text-lg">
+        <li><a href="index.html" class="hover:text-yellow-300 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-300 transition">About</a></li>
+        <li><a href="gallery.html" class="hover:text-yellow-300 transition">Gallery</a></li>
+        <li><a href="calculator.html" class="hover:text-yellow-300 transition">Calculator</a></li>
+        <li><a href="registration.html" class="hover:text-yellow-300 transition">Registration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-16">
+    <section class="text-center fade-in">
+      <div class="flex flex-col items-center">
+        <img src="assets/daniel.jpg" alt="Daniel Sinaga" class="rounded-full w-40 h-40 mb-6 shadow-md hover-scale border-4 border-blue-500">
+        <h2 class="text-3xl font-bold mb-4 text-blue-600">Hi, I'm Daniel Sinaga!</h2>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+          A passionate web developer from North Sumatra, Indonesia. I specialize in creating 
+          innovative and user-friendly web designs, blending creativity with functionality. 
+          Inspired by Japanese culture, I approach every project with precision and an artistic touch.
+        </p>
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <h3 class="text-2xl font-semibold text-center text-blue-500 mb-6">More About Me</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Personal Info -->
+        <div class="p-6 bg-white rounded-lg shadow-md hover-scale">
+          <h4 class="text-xl font-bold mb-4 text-blue-600">Who I Am</h4>
+          <p class="text-gray-600">
+            I am a curious and enthusiastic learner, always looking for opportunities to grow and improve.
+            My journey in web development began as a creative outlet, and it has evolved into a true passion.
+          </p>
+        </div>
+        <!-- Hobbies -->
+        <div class="p-6 bg-white rounded-lg shadow-md hover-scale">
+          <h4 class="text-xl font-bold mb-4 text-blue-600">Hobbies & Interests</h4>
+          <ul class="space-y-3 text-gray-600">
+            <li class="list-decor">Web development and design</li>
+            <li class="list-decor">Learning Japanese language and culture</li>
+            <li class="list-decor">Exploring creative projects</li>
+            <li class="list-decor">Photography and visual arts</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-12 text-center fade-in">
+      <h3 class="text-2xl font-semibold text-blue-500 mb-6">Let's Connect</h3>
+      <p class="text-gray-700 mb-4">
+        Want to collaborate or just say hi? Feel free to reach out and connect with me!
+      </p>
+      <a href="registration.html" class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md text-lg font-medium hover:bg-blue-600 transition">
+        Contact Me
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 <span class="text-yellow-300 font-semibold">Daniel Sinaga</span>. All Rights Reserved.
+  </footer>
+</body>
+</html>

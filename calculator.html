@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    footer {
+      background-color: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(to bottom right, #3b82f6, #9333ea);
+    }
+  </style>
+  <script src="/script/calculator.js" defer></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 shadow-lg">
+    <nav class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-wide">Daniel Sinaga</h1>
+      <ul class="flex space-x-6 text-lg">
+        <li><a href="index.html" class="hover:text-yellow-300 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-300 transition">About</a></li>
+        <li><a href="gallery.html" class="hover:text-yellow-300 transition">Gallery</a></li>
+        <li><a href="calculator.html" class="hover:text-yellow-300 transition">Calculator</a></li>
+        <li><a href="registration.html" class="hover:text-yellow-300 transition">Registration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-12">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Interactive Calculator</h2>
+      <p class="text-lg text-gray-600">Perform calculations easily with this sleek and functional design.</p>
+    </div>
+    <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <!-- Display -->
+      <input type="text" id="calculator-display" class="w-full text-right border border-gray-300 p-4 mb-6 rounded-lg text-2xl font-mono bg-gray-50" placeholder="0" disabled>
+
+      <!-- Buttons -->
+      <div class="grid grid-cols-4 gap-4">
+        <!-- Numbers and Operators -->
+        <button class="calc-btn bg-gray-200 p-4 rounded-lg hover:bg-gray-300 font-bold" data-value="7">7</button>
+        <button class="calc-btn bg-gray-200 p-4 rounded-lg hover:bg-gray-300 font-bold" data-value="8">8</button>
+        <button class="calc-btn bg-gray-200 p-4 rounded-lg hover:bg-gray-300 font-bold" data-value="9">9</button>
+        <button class="calc-btn operator bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600 font-bold" data-value="/">÷</button>
+        <button class="calc-btn bg-gray-200 p-4 rounded-lg hover:bg-gray-300 font-bold" data-value="4">4</button>
+        <button class="calc-btn bg-gray-200 p-4 rounded-lg hover:bg-gray-300 font-bold" data-value="5">5</button>
+        <button class="calc-btn bg-gray-200 p-4 rounded-lg hover:bg-gray-300 font-bold" data-value="6">6</button>
+        <button class="calc-btn operator bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600 font-bold" data-value="*">×</button>
+        <button class="calc-btn bg-gray-200 p-4 rounded-lg hover:bg-gray-300 font-bold" data-value="1">1</button>
+        <button class="calc-btn bg-gray-200 p-4 rounded-lg hover:bg-gray-300 font-bold" data-value="2">2</button>
+        <button class="calc-btn bg-gray-200 p-4 rounded-lg hover:bg-gray-300 font-bold" data-value="3">3</button>
+        <button class="calc-btn operator bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600 font-bold" data-value="-">−</button>
+        <button class="calc-btn bg-gray-200 p-4 rounded-lg hover:bg-gray-300 font-bold" data-value="0">0</button>
+        <button class="calc-btn bg-gray-200 p-4 rounded-lg hover:bg-gray-300 font-bold" data-value=".">.</button>
+        <button id="calc-clear" class="calc-btn bg-red-500 text-white p-4 rounded-lg hover:bg-red-600 font-bold">C</button>
+        <button class="calc-btn operator bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600 font-bold" data-value="+">+</button>
+        <button id="calc-equals" class="calc-btn col-span-4 bg-green-500 text-white p-4 rounded-lg hover:bg-green-600 font-bold text-lg">=</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Daniel Sinaga. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    footer {
+      background-color: #1f2937; /* Tailwind's gray-800 */
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .gallery-card {
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-card:hover .gallery-caption {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 shadow-lg">
+    <nav class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-wide">Daniel Sinaga</h1>
+      <ul class="flex space-x-6 text-lg">
+        <li><a href="index.html" class="hover:text-yellow-300 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-300 transition">About</a></li>
+        <li><a href="gallery.html" class="hover:text-yellow-300 transition">Gallery</a></li>
+        <li><a href="calculator.html" class="hover:text-yellow-300 transition">Calculator</a></li>
+        <li><a href="registration.html" class="hover:text-yellow-300 transition">Registration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-16">
+    <h2 class="text-4xl font-bold text-center text-blue-600 mb-10">My Creative Gallery</h2>
+    <p class="text-center text-lg text-gray-700 mb-12">
+      Here are some highlights of my projects and inspirations. Hover over each image to learn more!
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Gallery Item -->
+      <div class="gallery-card rounded-lg shadow-lg">
+        <img src="assets/web-development.jpg" alt="Project 1">
+        <div class="gallery-caption">
+          <h4 class="font-bold text-lg">Web Development</h4>
+          <p class="text-sm">I do a lot of projects in the website sector.</p>
+        </div>
+      </div>
+      <div class="gallery-card rounded-lg shadow-lg">
+        <img src="assets/java_big_logo.jpg" alt="Project 2">
+        <div class="gallery-caption">
+          <h4 class="font-bold text-lg">Java</h4>
+          <p class="text-sm">I have learned to use the Java language and carried out simple implementations.</p>
+        </div>
+      </div>
+      <div class="gallery-card rounded-lg shadow-lg">
+        <img src="assets/GitHub-logo.png" alt="Project 3">
+        <div class="gallery-caption">
+          <h4 class="font-bold text-lg">Github</h4>
+          <p class="text-sm">Some of my projects also use github.</p>
+        </div>
+      </div>
+      <div class="gallery-card rounded-lg shadow-lg">
+        <img src="assets/c++.png" alt="Project 4">
+        <div class="gallery-caption">
+          <h4 class="font-bold text-lg">C++</h4>
+          <p class="text-sm">Do some simple projects using the C++ language, especially during college.</p>
+        </div>
+      </div>
+      <div class="gallery-card rounded-lg shadow-lg">
+        <img src="assets/javascript.webp" alt="Project 5">
+        <div class="gallery-caption">
+          <h4 class="font-bold text-lg">JavaScript</h4>
+          <p class="text-sm">Of the various languages ​​I use for projects, I like using JavaScript the most.</p>
+        </div>
+      </div>
+      <div class="gallery-card rounded-lg shadow-lg">
+        <img src="assets/workout.webp" alt="Project 6">
+        <div class="gallery-caption">
+          <h4 class="font-bold text-lg">Workout</h4>
+          <p class="text-sm">I enjoy doing workouts, in between my daily activities.</p>
+        </div>
+      </div>
+      <div class="gallery-card rounded-lg shadow-lg">
+        <img src="assets/music.jpg" alt="Project 7">
+        <div class="gallery-caption">
+          <h4 class="font-bold text-lg">Music</h4>
+          <p class="text-sm">I also like listening to music while coding.</p>
+        </div>
+      </div>
+      <div class="gallery-card rounded-lg shadow-lg">
+        <img src="assets/Python-image.png" alt="Project 8">
+        <div class="gallery-caption">
+          <h4 class="font-bold text-lg">Python</h4>
+          <p class="text-sm">The most annoying project when using python.</p>
+        </div>
+      </div>
+      <div class="gallery-card rounded-lg shadow-lg">
+        <img src="assets/cover-buku-logika-algoritma-dan-pemrograman-dasar.webp" alt="Project 9">
+        <div class="gallery-caption">
+          <h4 class="font-bold text-lg">Book</h4>
+          <p class="text-sm">This book helped me a lot in learning in the world of programming.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 <span class="text-yellow-300 font-semibold">Daniel Sinaga</span>. All Rights Reserved.
+  </footer>
+</body>
+</html>

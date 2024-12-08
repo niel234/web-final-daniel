@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script/validation.js" defer></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 shadow-lg">
+    <nav class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-wide">Daniel Sinaga</h1>
+      <ul class="flex space-x-6 text-lg">
+        <li><a href="index.html" class="hover:text-yellow-300 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-300 transition">About</a></li>
+        <li><a href="gallery.html" class="hover:text-yellow-300 transition">Gallery</a></li>
+        <li><a href="calculator.html" class="hover:text-yellow-300 transition">Calculator</a></li>
+        <li><a href="registration.html" class="hover:text-yellow-300 transition">Registration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-16">
+    <h2 class="text-4xl font-extrabold text-center mb-8">Create Your Account</h2>
+    <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <form id="registration-form" class="space-y-6">
+        <div>
+          <label for="name" class="block text-lg font-medium text-gray-700">Full Name</label>
+          <input type="text" id="name" class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 transition-all duration-200" maxlength="40" required>
+        </div>
+        <div>
+          <label for="phone" class="block text-lg font-medium text-gray-700">Phone Number</label>
+          <input type="tel" id="phone" class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 transition-all duration-200" maxlength="15" required>
+        </div>
+        <div>
+          <label for="email" class="block text-lg font-medium text-gray-700">Email Address</label>
+          <input type="email" id="email" class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 transition-all duration-200" required>
+        </div>
+        <div>
+          <label for="password" class="block text-lg font-medium text-gray-700">Password</label>
+          <input type="password" id="password" class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 transition-all duration-200" required>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">Register</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-4 text-center">
+    <p>&copy; 2024 Daniel Sinaga. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
